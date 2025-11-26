@@ -17,7 +17,8 @@ logger:
 
 # Enable Home Assistant API
 api:
-  password: !secret esphome_utility_bridge_api_password
+  encryption:
+    key: !secret esphome_utility_bridge_api_encryption_key
 
   services:
     - service: set_speed
