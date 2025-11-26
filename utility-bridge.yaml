@@ -75,6 +75,18 @@ button:
         lambda: |-
           zehnder_fan->setSpeed(3, 30);
 
+  - platform: template
+    id: ${devicename}_low
+    name: ${upper_devicename} Low
+    on_press:
+      then:
+        lambda: |-
+          zehnder_fan->setSpeed(1, 0);
+
+  - platform: factory_reset
+    id: ${devicename}_reset_pairing
+    name: ${upper_devicename} Reset & Pair
+
 # Load external components
 # https://esphome.io/components/external_components.html#external-components-git
 external_components:
