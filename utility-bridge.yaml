@@ -78,6 +78,7 @@ button:
 # https://esphome.io/components/external_components.html#external-components-git
 external_components:
   - source: github://vadymbat/ESPHome-Zehnder-RF@feature/esphome_upgrade
+    refresh: 0s  # Force refresh from GitHub
 
 # SPI
 spi:
